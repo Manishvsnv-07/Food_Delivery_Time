@@ -254,7 +254,7 @@ export default function Home() {
         courier_experience_years: answers.courier_experience_years,
       };
 
-      const res = await fetch("http://localhost:8000/api/predict", {
+      const res = await fetch(`${process.env.BACKEND_URL}/api/predict`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
